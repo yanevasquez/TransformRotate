@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Rotação com ícones</title>
+</head>	
+	<style>
+	 body {
+	 	margin-top: 40px;
+	 	margin-left: 40px;
+	 }
+	 
+	@keyframes esquerda-direita {      
+		from { left: 0px; }           
+    		to { left: calc(100% - 50px); }
+  		}	
+      
+	@keyframes girar {
+    		to {
+        	transform: rotate(-10deg);
+    			}
+		  }
+      
+	.icones {
+    display:flex;
+		margin-bottom: 1px;
+		border: solid, black;
+	}
+
+	.icon .material-icons {
+	 	font-size: 100px;
+  	color: #0097A7;
+    margin:0px;
+    margin-top:47px;
+	}   
+	 .icon2 .material-icons {
+	 	margin-top: 20px;
+	 	font-size: 100px;
+    color: #0097A7;
+    -webkit-transform: rotate(-45deg);
+		
+	}
+	 .icon3 .material-icons {
+	   font-size: 100px;
+     color: #0097A7;
+    -webkit-transform: rotate(6deg);
+     margin:30px;
+     margin-left: 45px;
+		 animation: girar 1s linear;  
+	}
+  
+	.icon4 .material-icons {
+	 	font-size: 100px;
+  	color: #0097A7;
+    margin:30px;
+    margin-top:47px;
+		left: 0;
+		position: relative;
+ 		cursor: pointer;
+    animation: esquerda-direita 2.5s infinite ; 
+		animation-play-state: running;		
+	}   	
+
+	</style>
+	<body>
+		<div class="icones"> 
+		<div class="icon"> <i class="material-icons or-color">directions_bike</i></div>   
+    <div class="icon2"><i class="material-icons or-color">directions_bike</i></div>
+    <div class="icon3"><i class="material-icons or-color">directions_bike</i></div>   
+		<div class="icon4"><i class="material-icons or-color">directions_bike</i></div>
+		</div>
+	</body>
+</html>
